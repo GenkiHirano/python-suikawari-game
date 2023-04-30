@@ -1,6 +1,8 @@
 import random
 import math
 
+BOARD_SIZE = 5  # ボードの初期サイズ
+
 
 def calc_distance(x1, y1, x2, y2):
     # ２点間の距離を求める
@@ -10,11 +12,11 @@ def calc_distance(x1, y1, x2, y2):
     return math.sqrt(diff_x**2 + diff_y**2)
 
 
-suika_x = random.randrange(0, 5)  # スイカのx座標
-suika_y = random.randrange(0, 5)  # スイカのy座標
+suika_x = random.randrange(0, BOARD_SIZE)  # スイカのx座標 <- この行を修正
+suika_y = random.randrange(0, BOARD_SIZE)  # スイカのy座標 <- この行を修正
 
-player_x = random.randrange(0, 5)  # プレイヤーのx座標
-player_y = random.randrange(0, 5)  # プレイヤーのy座標
+player_x = random.randrange(0, BOARD_SIZE)  # プレイヤーのx座標 <- この行を修正
+player_y = random.randrange(0, BOARD_SIZE)  # プレイヤーのy座標 <- この行を修正
 
 # スイカとプレイヤーの位置が異なる間、処理を繰り返す
 while (suika_x != player_x) or (suika_y != player_y):
